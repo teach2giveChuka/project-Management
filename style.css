@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dddbdb;
+    margin: 0;
+    padding: 20px;
+
+  
+}
+h1{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ion-icon:hover{
+    cursor: pointer;
+}
+
+
+h1, h2 {
+    text-align: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgb(153, 153, 153);
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    gap: 10px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+#startDate{
+    height: 20px;
+    width: 50%;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 5px;
+}
+#endDate{
+    height: 20px;
+    width: 50%;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 5px;
+}
+#projectDescription{
+    height: 40px;
+    width: 90%;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 10px;
+
+}
+input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+    border-radius: 20px;
+}
+
+button {
+    padding: 10px;
+    background: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+button:hover {
+    background: #4cae4c;
+}
+
+.projects-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.projects-container li {
+    background: #eee;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 4px;
+}
+
+.projects-container button {
+    background: #d9534f;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.projects-container button:hover {
+    background: #c9302c;
+}
