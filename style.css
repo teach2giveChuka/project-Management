@@ -1,6 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #dddbdb;
+    font-family: 'Playfair Display', cursive;
+    background-color: #f7f7f7;
     margin: 0;
     padding: 20px;
 
@@ -13,15 +13,29 @@ h1{
 }
 
 .container {
-    max-width: 600px;
+    width: 60vw;
     margin: auto;
     background: #fff;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 20px 20px rgba(0, 0, 0, 0.1);
+    /* background-color: rgb(30, 29, 29); */
+}
+.dark_light{
+    height: 24px;
+    width: 24px;
+    border-radius: 50px;
+}
+
+.toggle ion-icon:hover{
+    background-color: rgb(166, 172, 166);
+    border: 1px solid white;    
+    height: 26px;
+    height: 26px;
 }
 
 ion-icon:hover{
     cursor: pointer;
+
 }
 
 
@@ -35,32 +49,46 @@ h1, h2 {
     justify-content: center;
     margin-bottom: 20px;
     padding: 20px;
-    background-color: rgb(153, 153, 153);
+    
+    background-color: rgb(171, 171, 171);
+    
     border: 1px solid #ccc;
     border-radius: 20px;
-    gap: 10px;
+    gap: 15px;
+}
+
+.form{
+    display: none;
 }
 form{
     display: flex;
     flex-direction: column;
     gap: 7px;
+    
+}
+.time{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 #startDate{
     height: 20px;
-    width: 50%;
+    width: 30%;
     border: 1px solid #ccc;
     background-color: transparent;
     border-radius: 20px;
     padding: 5px;
+    margin-bottom: 10px;
 }
 #endDate{
     height: 20px;
-    width: 50%;
+    width: 30%;
     border: 1px solid #ccc;
     background-color: transparent;
     border-radius: 20px;
     padding: 5px;
+    margin-bottom: 10px;
 }
 #projectDescription{
     height: 40px;
@@ -69,6 +97,7 @@ form{
     background-color: transparent;
     border-radius: 20px;
     padding: 10px;
+    margin-bottom: 15px;
 
 }
 input[type="text"] {
@@ -78,6 +107,7 @@ input[type="text"] {
     border-radius: 4px;
     background-color: transparent;
     border-radius: 20px;
+    margin-bottom: 10px;
 }
 
 button {

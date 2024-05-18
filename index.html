@@ -1,44 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body> 
 
-    <ion-icon name="contrast-outline"></ion-icon>
-    <div class="container">
-        <h1> <ion-icon name="code-outline"></ion-icon>  Project Management Dashboard</h1>
-        
-        
-        <div class="form-container">
-            <form action="">
-                <input type="text" id="projectName" placeholder="Enter project name">
-            <input type="text" id="projectLink" placeholder="Insert URL to project">
-            <input type="date" id="startDate" placeholder="Start Date">
-            <input type="date" id="endDate" placeholder="End Date"> 
-            <textarea id="projectDescription" placeholder="Project Description"></textarea> 
-            <button id="addProject">Add Project</button>
-            </form>
-            
-        </div>
-        
-        <div class="ProjNav">
-            
-        </div>
-        
-        <div class="projects-container">
-            <h2>Projects</h2>
-            <ul id="projectsLoad">
-                <!-- :-)    List items to be loaded from javascript code :-)    -->
-            </ul>
-        </div>
+<body class="body">
+
+    <div class="toggle">
+        <ion-icon class="dark_light" id="l" name="contrast-outline"></ion-icon>
     </div>
-    
-    <script src="main.js"></script> 
+    <div class="container">
+        <h1> <ion-icon name="code-outline"></ion-icon> Project Management Dashboard</h1>
+
+
+        <div class="form-container">
+            <form action="" class="form" id="form-main">
+                <div> Project Name
+                    <input type="text" id="projectName" placeholder="Enter project name">
+                </div>
+                <div>Live URL
+                    <input type="text" id="projectLink" placeholder="Insert URL to project">
+                </div>
+                <div class="time">
+                    <div class="start">Start Date:</div> <input type="date" id="startDate" placeholder="Start Date">
+                    <div class="end">Deadline</div><input type="date" id="endDate" placeholder="End Date">
+                </div>
+                <div>Project Description
+                    <textarea id="projectDescription" placeholder="Project Description"></textarea>
+                </div>
+                <button id="addProject">Add Project</button>
+            </form>
+
+            <button style="width: 60px;" class="formShow" id="s"> New Project</button>
+
+        </div>
+
+        <div class="ProjNav">
+
+        </div>
+
+
+    </div>
+
+    <div class="projects-container">
+        <h2 class="body" style="text-shadow: 1px 1px 1px  white;">Projects</h2>
+        <ul id="projectsLoad">
+            <!-- :-)    List items to be loaded from javascript code :-)    -->
+        </ul>
+    </div>
+
+    <script src="main.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>  
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
