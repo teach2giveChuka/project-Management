@@ -161,13 +161,13 @@ toggle.addEventListener('click', ()=>{
     toggle.id = 'd';
     }
     else if(toggle.id === 'd'){
-        body.style.background = '#dddbdb';
+        body.style.background = '#e0bdbd';
         toggle.id = 'l';
         form.style.background = 'rgb(143, 143, 143)';
         container.style.background = '#FFFFFF';
         container.style.color = "black";
         
-        li.style.background = "#ebebeb";
+        li.style.background = "#fff2d7";
         
 
     }
