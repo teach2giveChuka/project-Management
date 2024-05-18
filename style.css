@@ -11,6 +11,10 @@ h1{
     justify-content: center;
     gap: 20px;
 }
+.end{
+    display: flex;
+    flex-wrap: nowrap;
+}
 
 .container {
     width: 60vw;
@@ -127,15 +131,48 @@ button:hover {
 .projects-container ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    /* flex-direction: column; */
+    align-items: center;
+    /* background-color: #4cae4c; */
 }
 
 .projects-container li {
-    background: #eee;
+    
+    background: #ebebeb;
     padding: 10px;
     margin-bottom: 10px;
     display: flex;
-    justify-content: space-between;
+    border: 1px solid #dadada;
     border-radius: 4px;
+    width: 30vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.projects-container li button{
+    height: 35px;
+}
+
+table{
+    background: #ebebeb;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    border: 1px solid #dadada;
+    border-radius: 4px;
+    width: 70vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 .projects-container button {
@@ -143,8 +180,11 @@ button:hover {
     border: none;
     color: white;
     cursor: pointer;
-    padding: 5px 10px;
+    padding: 10px 10px;
     border-radius: 4px;
+    margin-bottom: 3px;
+    height: 100%;
+    
 }
 
 .projects-container button:hover {

@@ -11,8 +11,11 @@
     let li;
     let formToggle = document.querySelector('.formShow');
     let form_main = document.querySelector('.form');
+
+
+
     // Load projects from local storage 
-    let projects = JSON.parse(localStorage.getItem('projects')) || [];
+    let projects = JSON.parse(localStorage.getItem('projects'));
 
     
     const displayProjects = () => {
@@ -41,8 +44,13 @@
             let deleteBtn = document.createElement('button');
             deleteBtn.textContent = 'Delete';
 
+            let viewbtn = document.createElement('button');
+            viewbtn.textContent = 'View Project';
+
+            let buttonContainer = document.createElement('div');
+
             let viewProjectBtn = document.createElement('button');
-            viewProjectBtn.textContent = 'View Project';
+            viewProjectBtn.textContent = 'Live Project View';
 
             // Button to redirect to one project
             viewProjectBtn.addEventListener('click', () => {
@@ -53,9 +61,20 @@
                     alert('!Error No project link provided for this project!');
                 }
             });
+
+            viewbtn.addEventListener('click', ()=>{
+                console.log("clicked view button", index);
+                let hlink = "project.html"+index;
+                console.log(hlink);
+                window.location.href = 'project.html?index='+index;
+
+
+                
+            })
             
             deleteBtn.addEventListener('click', () => {
                 deleteProject(index);
+                console.log("deleted index", index);
             });
 
             //Append all elements to the li tag
@@ -63,9 +82,17 @@
             // li.appendChild(startDateDiv);
             // li.appendChild(endDateDiv);
             // li.appendChild(descriptionDiv);
-            li.appendChild(deleteBtn); 
-            li.appendChild(viewProjectBtn);
+            // li.appendChild(deleteBtn); 
+            // li.appendChild(viewbtn);
+            // li.appendChild(viewProjectBtn);
+            buttonContainer.appendChild(deleteBtn);
+            buttonContainer.appendChild(viewbtn);
+            buttonContainer.appendChild(viewProjectBtn);
+            li.appendChild(buttonContainer);
             viewProjectBtn.style.background = "orange";
+            viewbtn.style.background = 'rgb(144, 53, 236)'
+            buttonContainer.style.display = 'flex';
+
             projectsList.appendChild(li);
         });
     };
@@ -103,6 +130,8 @@
         }
     };
 
+   
+
     // Function to delete a project
     const deleteProject = (index) => {
 
@@ -127,7 +156,7 @@ toggle.addEventListener('click', ()=>{
     form.style.background = 'rgb(59, 59, 59)';
     container.style.background = "rgb(30, 29, 29)";
     container.style.color = "white";
-    li.style.color = "black"
+    li.style.background = "rgb(143, 143, 143)";
 
     toggle.id = 'd';
     }
@@ -137,6 +166,8 @@ toggle.addEventListener('click', ()=>{
         form.style.background = 'rgb(143, 143, 143)';
         container.style.background = '#FFFFFF';
         container.style.color = "black";
+        
+        li.style.background = "#ebebeb";
         
 
     }
