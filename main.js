@@ -10,6 +10,7 @@
     let container = document.querySelector('.container');
     let li;
     let formToggle = document.querySelector('.formShow');
+    let projectsToggle = document.querySelector('.projectsShow');
     let form_main = document.querySelector('.form');
 
 
@@ -192,6 +193,24 @@ formToggle.addEventListener('click', ()=>{
         formToggle.id = 's';
     }
 });
+
+projectsToggle.addEventListener('click', ()=>{
+    if(projectsToggle.id === 's'){
+        console.log('Projects toggle');
+        projectsList.style.display = "flex";
+        console.log('form toggle');
+        projectsToggle.style.background = 'rgb(208, 77, 77)';
+        projectsToggle.innerHTML = 'Hide';
+        projectsToggle.id = 'h';
+    }
+    else if(projectsToggle.id === 'h'){
+        projectsList.style.display = "none";
+        projectsToggle.style.background = '#74d26e';
+        projectsToggle.innerHTML = 'Show Projects';
+        projectsToggle.id = 's';
+    }
+});
+
 
 let view = localStorage.getItem('projects', JSON.stringify(projects));
 console.log(projects[0].name);

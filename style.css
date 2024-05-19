@@ -129,6 +129,13 @@ button:hover {
     background: #4cae4c;
 }
 
+.projects-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .projects-container ul {
     list-style: none;
     padding: 0;
